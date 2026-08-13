@@ -37,3 +37,26 @@ XTwin 当前模型、继承关系和实例事实
 EffectiveEnergyResolver 动态解析
         ↓
 EffectiveMeter 实例级结果
+
+
+billingEngine.Start()
+  ↓
+billingLoop()
+  ↓
+buildOps()
+  ↓
+读取 EnergyType / Measurement
+  ↓
+查询实际仪表
+  ↓
+生成 UsagePointTask
+  ↓
+runOp()
+  ├─ DataExtractor.ExtractBatchData()
+  ├─ AnomalyDetector.DetectAndClean()
+  ├─ BillingComputer.ComputeSingle()
+  │    ├─ 查 Billing
+  │    ├─ 查 PricePlan
+  │    └─ 计算 cost / co2 / tce
+  ├─ buildCascadeResults()
+  └─ ResultWriter.BatchWriteBillingResults()
