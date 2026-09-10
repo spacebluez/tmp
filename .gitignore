@@ -1,1 +1,52 @@
-tabby-1.0.235-setup-x64.exe
+# 大二进制：下载/安装包
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.7z
+*.rar
+*.exe
+*.msi
+*.dmg
+*.iso
+*.deb
+*.rpm
+*.apk
+*.ipa
+*.pkg
+
+# 图片/媒体（按需保留小的放进仓）
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp
+*.mp4
+*.mov
+*.avi
+*.mp3
+*.wav
+*.flac
+
+# 文档/办公（按需保留）
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+
+# Go 工具链/构建产物（不该进 git）
+go*.zip
+go*.tar.gz
+vendor/
+
+# 临时/敏感
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+.env
+.env.local
