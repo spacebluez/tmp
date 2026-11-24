@@ -32,7 +32,6 @@
 *.pdf
 *.docx
 *.xlsx
-*.pptx
 
 # Go 工具链/构建产物（不该进 git）
 go*.zip
